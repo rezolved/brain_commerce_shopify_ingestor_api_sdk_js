@@ -1,0 +1,11 @@
+generatorName: javascript
+inputSpec: ./openapi.json
+outputDir: ./
+additionalProperties:
+  packageName: braincommerce-shopify-ingestor-sdk
+  npmVersion: 1.0.0
+  modelPropertyNaming: snake_case
+  withSeparateModelsAndApi: true
+  usePromises: true
+  enablePostProcessFile: true
+  #skipOperationExample: true
