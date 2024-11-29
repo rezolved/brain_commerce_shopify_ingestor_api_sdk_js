@@ -149,10 +149,6 @@ Class | Method | HTTP request | Description
 *BrainCommerceShopifyIngestorApi.FaqApi* | [**importMultipleFaqs**](docs/FaqApi.md#importMultipleFaqs) | **POST** /v1/faq | Import Multiple Faqs
 *BrainCommerceShopifyIngestorApi.FaqApi* | [**resetFaqCollection**](docs/FaqApi.md#resetFaqCollection) | **DELETE** /v1/faq/reset-collection | Deletes All Faq From Collection
 *BrainCommerceShopifyIngestorApi.FaqApi* | [**updateFaqByQuestion**](docs/FaqApi.md#updateFaqByQuestion) | **PUT** /v1/faq/{question} | Update Faq By Question
-*BrainCommerceShopifyIngestorApi.IngestionApi* | [**configureRarbbitmq**](docs/IngestionApi.md#configureRarbbitmq) | **POST** /v1/configure-rabbitmq | Configures Rabbitmq With Exchange, Queues And Bindings.
-*BrainCommerceShopifyIngestorApi.IngestionApi* | [**getFullProductIngestionQueue**](docs/IngestionApi.md#getFullProductIngestionQueue) | **GET** /v1/product-ingestion-queue | Get Full Product Ingestion Status.
-*BrainCommerceShopifyIngestorApi.IngestionApi* | [**queueFullProductIngestion**](docs/IngestionApi.md#queueFullProductIngestion) | **POST** /v1/product-ingestion-queue | Queue Full Product Ingestion.
-*BrainCommerceShopifyIngestorApi.IngestionApi* | [**terminateFullProductIngestion**](docs/IngestionApi.md#terminateFullProductIngestion) | **DELETE** /v1/product-ingestion-queue | Terminates Currently Running Full Product Ingestion.
 *BrainCommerceShopifyIngestorApi.ProductApi* | [**collectionExists**](docs/ProductApi.md#collectionExists) | **GET** /v1/product/collection-exists | Check If Product Collection Exists.
 *BrainCommerceShopifyIngestorApi.ProductApi* | [**createCollection**](docs/ProductApi.md#createCollection) | **POST** /v1/product/collection | Create Product Collection
 *BrainCommerceShopifyIngestorApi.ProductApi* | [**createProductBySku**](docs/ProductApi.md#createProductBySku) | **POST** /v1/product/{sku} | Create Product By Sku
@@ -173,8 +169,6 @@ Class | Method | HTTP request | Description
  - [BrainCommerceShopifyIngestorApi.HTTPValidationError](docs/HTTPValidationError.md)
  - [BrainCommerceShopifyIngestorApi.Product](docs/Product.md)
  - [BrainCommerceShopifyIngestorApi.ProductAvailability](docs/ProductAvailability.md)
- - [BrainCommerceShopifyIngestorApi.ProductIngestorStatus](docs/ProductIngestorStatus.md)
- - [BrainCommerceShopifyIngestorApi.ResponseGetFullProductIngestionQueue](docs/ResponseGetFullProductIngestionQueue.md)
  - [BrainCommerceShopifyIngestorApi.ValidationError](docs/ValidationError.md)
  - [BrainCommerceShopifyIngestorApi.ValidationErrorLocInner](docs/ValidationErrorLocInner.md)
 

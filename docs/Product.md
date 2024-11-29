@@ -29,7 +29,7 @@ Name | Type | Description | Notes
 **gtin** | **String** |  | [optional] [default to &#39;&#39;]
 **condition** | **String** |  | [optional] [default to &#39;&#39;]
 **adult** | **String** |  | [optional] [default to &#39;&#39;]
-**review_summaries** | **String** |  | [optional] [default to &#39;&#39;]
+**summary_review** | **String** |  | [optional] [default to &#39;&#39;]
 **average_rating** | **Number** |  | [optional] [default to 0]
 
 

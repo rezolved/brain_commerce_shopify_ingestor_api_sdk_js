@@ -60,7 +60,7 @@ class Product {
         obj['gtin'] = '';
         obj['condition'] = '';
         obj['adult'] = '';
-        obj['review_summaries'] = '';
+        obj['summary_review'] = '';
         obj['average_rating'] = 0;
     }
 
@@ -150,8 +150,8 @@ class Product {
             if (data.hasOwnProperty('adult')) {
                 obj['adult'] = ApiClient.convertToType(data['adult'], 'String');
             }
-            if (data.hasOwnProperty('review_summaries')) {
-                obj['review_summaries'] = ApiClient.convertToType(data['review_summaries'], 'String');
+            if (data.hasOwnProperty('summary_review')) {
+                obj['summary_review'] = ApiClient.convertToType(data['summary_review'], 'String');
             }
             if (data.hasOwnProperty('average_rating')) {
                 obj['average_rating'] = ApiClient.convertToType(data['average_rating'], 'Number');
@@ -257,8 +257,8 @@ class Product {
             throw new Error("Expected the field `adult` to be a primitive type in the JSON string but got " + data['adult']);
         }
         // ensure the json data is a string
-        if (data['review_summaries'] && !(typeof data['review_summaries'] === 'string' || data['review_summaries'] instanceof String)) {
-            throw new Error("Expected the field `review_summaries` to be a primitive type in the JSON string but got " + data['review_summaries']);
+        if (data['summary_review'] && !(typeof data['summary_review'] === 'string' || data['summary_review'] instanceof String)) {
+            throw new Error("Expected the field `summary_review` to be a primitive type in the JSON string but got " + data['summary_review']);
         }
 
         return true;
@@ -414,10 +414,10 @@ Product.prototype['condition'] = '';
 Product.prototype['adult'] = '';
 
 /**
- * @member {String} review_summaries
+ * @member {String} summary_review
  * @default ''
  */
-Product.prototype['review_summaries'] = '';
+Product.prototype['summary_review'] = '';
 
 /**
  * @member {Number} average_rating
