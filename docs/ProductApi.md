@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**createProductBySku**](ProductApi.md#createProductBySku) | **POST** /v1/product/{sku} | Create Product By Sku
 [**deleteCollection**](ProductApi.md#deleteCollection) | **DELETE** /v1/product/collection | Delete Product Collection
 [**deleteProductByInternalId**](ProductApi.md#deleteProductByInternalId) | **DELETE** /v1/product/by-internal-id/{internal_id} | Delete Product By Internal Id
+[**deleteProductByItemGroupId**](ProductApi.md#deleteProductByItemGroupId) | **DELETE** /v1/product/by-item-group-id/{item_group_id} | Delete Product By Item Group Id
 [**deleteProductBySku**](ProductApi.md#deleteProductBySku) | **DELETE** /v1/product/{sku} | Delete Product By Sku
 [**getAllProducts**](ProductApi.md#getAllProducts) | **GET** /v1/product | Get All Products
 [**getProductBySku**](ProductApi.md#getProductBySku) | **GET** /v1/product/{sku} | Gest Product By Sku
@@ -249,6 +250,56 @@ apiInstance.deleteProductByInternalId(internal_id).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **internal_id** | **Number**|  | 
+
+### Return type
+
+**Boolean**
+
+### Authorization
+
+[APIKeyHeader](../README.md#APIKeyHeader)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## deleteProductByItemGroupId
+
+> Boolean deleteProductByItemGroupId(item_group_id)
+
+Delete Product By Item Group Id
+
+Delete product by item_group_id
+
+### Example
+
+```javascript
+import BrainCommerceShopifyIngestorApi from 'brain_commerce_shopify_ingestor_api';
+let defaultClient = BrainCommerceShopifyIngestorApi.ApiClient.instance;
+// Configure API key authorization: APIKeyHeader
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+APIKeyHeader.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKeyHeader.apiKeyPrefix = 'Token';
+
+let apiInstance = new BrainCommerceShopifyIngestorApi.ProductApi();
+let item_group_id = "item_group_id_example"; // String | 
+apiInstance.deleteProductByItemGroupId(item_group_id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **item_group_id** | **String**|  | 
 
 ### Return type
 

@@ -1,6 +1,5 @@
 .babelrc
 .gitignore
-.openapi-generator-ignore
 .travis.yml
 README.md
 docs/Content.md
@@ -30,14 +29,3 @@ src/model/Product.js
 src/model/ProductAvailability.js
 src/model/ValidationError.js
 src/model/ValidationErrorLocInner.js
-test/api/ContentApi.spec.js
-test/api/DefaultApi.spec.js
-test/api/FaqApi.spec.js
-test/api/ProductApi.spec.js
-test/model/Content.spec.js
-test/model/Faq.spec.js
-test/model/HTTPValidationError.spec.js
-test/model/Product.spec.js
-test/model/ProductAvailability.spec.js
-test/model/ValidationError.spec.js
-test/model/ValidationErrorLocInner.spec.js
