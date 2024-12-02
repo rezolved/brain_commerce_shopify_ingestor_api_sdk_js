@@ -18,14 +18,11 @@ import Faq from './model/Faq';
 import HTTPValidationError from './model/HTTPValidationError';
 import Product from './model/Product';
 import ProductAvailability from './model/ProductAvailability';
-import ProductIngestorStatus from './model/ProductIngestorStatus';
-import ResponseGetFullProductIngestionQueue from './model/ResponseGetFullProductIngestionQueue';
 import ValidationError from './model/ValidationError';
 import ValidationErrorLocInner from './model/ValidationErrorLocInner';
 import ContentApi from './api/ContentApi';
 import DefaultApi from './api/DefaultApi';
 import FaqApi from './api/FaqApi';
-import IngestionApi from './api/IngestionApi';
 import ProductApi from './api/ProductApi';
 
 
@@ -98,18 +95,6 @@ export {
     ProductAvailability,
 
     /**
-     * The ProductIngestorStatus model constructor.
-     * @property {module:model/ProductIngestorStatus}
-     */
-    ProductIngestorStatus,
-
-    /**
-     * The ResponseGetFullProductIngestionQueue model constructor.
-     * @property {module:model/ResponseGetFullProductIngestionQueue}
-     */
-    ResponseGetFullProductIngestionQueue,
-
-    /**
      * The ValidationError model constructor.
      * @property {module:model/ValidationError}
      */
@@ -138,12 +123,6 @@ export {
     * @property {module:api/FaqApi}
     */
     FaqApi,
-
-    /**
-    * The IngestionApi service constructor.
-    * @property {module:api/IngestionApi}
-    */
-    IngestionApi,
 
     /**
     * The ProductApi service constructor.

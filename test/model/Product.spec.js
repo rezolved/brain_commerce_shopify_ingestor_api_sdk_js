@@ -204,8 +204,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property review_summaries (base name: "review_summaries")', function() {
-      // uncomment below and update the code to test the property review_summaries
+    it('should have the property summary_review (base name: "summary_review")', function() {
+      // uncomment below and update the code to test the property summary_review
       //var instance = new BrainCommerceShopifyIngestorApi.Product();
       //expect(instance).to.be();
     });
