@@ -1,4 +1,4 @@
-# BrainCommerceShopifyIngestorApi.HTTPValidationError
+# MerchantStoreApi.HTTPValidationError
 
 ## Properties
 

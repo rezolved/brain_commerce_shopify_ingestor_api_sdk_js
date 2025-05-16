@@ -1,26 +1,72 @@
-# BrainCommerceShopifyIngestorApi.FaqApi
+# MerchantStoreApi.FaqApi
 
-All URIs are relative to */shopify*
+All URIs are relative to */merchant*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createFaqByQuestion**](FaqApi.md#createFaqByQuestion) | **POST** /v1/faq/{question} | Create Faq By Question
-[**createFaqCollection**](FaqApi.md#createFaqCollection) | **POST** /v1/faq/collection | Create Faq Collection
-[**deleteFaqByInternalId**](FaqApi.md#deleteFaqByInternalId) | **DELETE** /v1/faq/by-internal-id/{internal_id} | Delete Faq By Internal Id
-[**deleteFaqByQuestion**](FaqApi.md#deleteFaqByQuestion) | **DELETE** /v1/faq/{question} | Delete Faq By Question
-[**deleteFaqCollection**](FaqApi.md#deleteFaqCollection) | **DELETE** /v1/faq/collection | Delete Faq Collection
-[**getAllFaqs**](FaqApi.md#getAllFaqs) | **GET** /v1/faq | Get All Faqs
-[**getFaqByQuestion**](FaqApi.md#getFaqByQuestion) | **GET** /v1/faq/{question} | Get Faq By Question
-[**getFaqCollectionExists**](FaqApi.md#getFaqCollectionExists) | **GET** /v1/faq/collection-exists | Check If Faq Collection Exists.
-[**importMultipleFaqs**](FaqApi.md#importMultipleFaqs) | **POST** /v1/faq | Import Multiple Faqs
-[**resetFaqCollection**](FaqApi.md#resetFaqCollection) | **DELETE** /v1/faq/reset-collection | Deletes All Faq From Collection
-[**updateFaqByQuestion**](FaqApi.md#updateFaqByQuestion) | **PUT** /v1/faq/{question} | Update Faq By Question
+[**checkIfFAQCollectionExistsV1FaqsCollectionExistsGet**](FaqApi.md#checkIfFAQCollectionExistsV1FaqsCollectionExistsGet) | **GET** /v1/faqs/collection-exists | Check If Faq Collection Exists.
+[**createFAQByQuestionV1FaqsQuestionPost**](FaqApi.md#createFAQByQuestionV1FaqsQuestionPost) | **POST** /v1/faqs/{question} | Create Faq By Question
+[**createFAQCollectionV1FaqsCollectionPost**](FaqApi.md#createFAQCollectionV1FaqsCollectionPost) | **POST** /v1/faqs/collection | Create Faq Collection
+[**deleteFAQByInternalIdV1FaqsByInternalIdInternalIdDelete**](FaqApi.md#deleteFAQByInternalIdV1FaqsByInternalIdInternalIdDelete) | **DELETE** /v1/faqs/by-internal-id/{internal_id} | Delete Faq By Internal Id
+[**deleteFAQByQuestionV1FaqsQuestionDelete**](FaqApi.md#deleteFAQByQuestionV1FaqsQuestionDelete) | **DELETE** /v1/faqs/{question} | Delete Faq By Question
+[**deleteFAQCollectionV1FaqsCollectionDelete**](FaqApi.md#deleteFAQCollectionV1FaqsCollectionDelete) | **DELETE** /v1/faqs/collection | Delete Faq Collection
+[**deletesAllFAQFromCollectionV1FaqsResetCollectionDelete**](FaqApi.md#deletesAllFAQFromCollectionV1FaqsResetCollectionDelete) | **DELETE** /v1/faqs/reset-collection | Deletes All Faq From Collection
+[**getAllFAQsV1FaqsGet**](FaqApi.md#getAllFAQsV1FaqsGet) | **GET** /v1/faqs | Get All Faqs
+[**getFAQByQuestionV1FaqsQuestionGet**](FaqApi.md#getFAQByQuestionV1FaqsQuestionGet) | **GET** /v1/faqs/{question} | Get Faq By Question
+[**importMultipleFAQsV1FaqsPost**](FaqApi.md#importMultipleFAQsV1FaqsPost) | **POST** /v1/faqs | Import Multiple Faqs
+[**updateFAQByQuestionV1FaqsQuestionPut**](FaqApi.md#updateFAQByQuestionV1FaqsQuestionPut) | **PUT** /v1/faqs/{question} | Update Faq By Question
 
 
 
-## createFaqByQuestion
+## checkIfFAQCollectionExistsV1FaqsCollectionExistsGet
 
-> Faq createFaqByQuestion(question, faq)
+> Object checkIfFAQCollectionExistsV1FaqsCollectionExistsGet()
+
+Check If Faq Collection Exists.
+
+Returns true if FAQ collection exists else return false
+
+### Example
+
+```javascript
+import MerchantStoreApi from 'merchant_store_api';
+let defaultClient = MerchantStoreApi.ApiClient.instance;
+// Configure API key authorization: APIKeyHeader
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+APIKeyHeader.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKeyHeader.apiKeyPrefix = 'Token';
+
+let apiInstance = new MerchantStoreApi.FaqApi();
+apiInstance.checkIfFAQCollectionExistsV1FaqsCollectionExistsGet().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[APIKeyHeader](../README.md#APIKeyHeader)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## createFAQByQuestionV1FaqsQuestionPost
+
+> Faq createFAQByQuestionV1FaqsQuestionPost(question, faq)
 
 Create Faq By Question
 
@@ -29,18 +75,18 @@ Create FAQ by question
 ### Example
 
 ```javascript
-import BrainCommerceShopifyIngestorApi from 'brain_commerce_shopify_ingestor_api';
-let defaultClient = BrainCommerceShopifyIngestorApi.ApiClient.instance;
+import MerchantStoreApi from 'merchant_store_api';
+let defaultClient = MerchantStoreApi.ApiClient.instance;
 // Configure API key authorization: APIKeyHeader
 let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new BrainCommerceShopifyIngestorApi.FaqApi();
+let apiInstance = new MerchantStoreApi.FaqApi();
 let question = "question_example"; // String | 
-let faq = new BrainCommerceShopifyIngestorApi.Faq(); // Faq | 
-apiInstance.createFaqByQuestion(question, faq).then((data) => {
+let faq = new MerchantStoreApi.Faq(); // Faq | 
+apiInstance.createFAQByQuestionV1FaqsQuestionPost(question, faq).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -70,9 +116,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## createFaqCollection
+## createFAQCollectionV1FaqsCollectionPost
 
-> Object createFaqCollection(opts)
+> Object createFAQCollectionV1FaqsCollectionPost(opts)
 
 Create Faq Collection
 
@@ -81,19 +127,19 @@ Creates FAQ collection/schema in Weaviate database
 ### Example
 
 ```javascript
-import BrainCommerceShopifyIngestorApi from 'brain_commerce_shopify_ingestor_api';
-let defaultClient = BrainCommerceShopifyIngestorApi.ApiClient.instance;
+import MerchantStoreApi from 'merchant_store_api';
+let defaultClient = MerchantStoreApi.ApiClient.instance;
 // Configure API key authorization: APIKeyHeader
 let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new BrainCommerceShopifyIngestorApi.FaqApi();
+let apiInstance = new MerchantStoreApi.FaqApi();
 let opts = {
   'delete_existing_collection': false // Boolean | 
 };
-apiInstance.createFaqCollection(opts).then((data) => {
+apiInstance.createFAQCollectionV1FaqsCollectionPost(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -122,9 +168,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## deleteFaqByInternalId
+## deleteFAQByInternalIdV1FaqsByInternalIdInternalIdDelete
 
-> Boolean deleteFaqByInternalId(internal_id)
+> Boolean deleteFAQByInternalIdV1FaqsByInternalIdInternalIdDelete(internal_id)
 
 Delete Faq By Internal Id
 
@@ -133,17 +179,17 @@ Delete FAQ by internal_id
 ### Example
 
 ```javascript
-import BrainCommerceShopifyIngestorApi from 'brain_commerce_shopify_ingestor_api';
-let defaultClient = BrainCommerceShopifyIngestorApi.ApiClient.instance;
+import MerchantStoreApi from 'merchant_store_api';
+let defaultClient = MerchantStoreApi.ApiClient.instance;
 // Configure API key authorization: APIKeyHeader
 let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new BrainCommerceShopifyIngestorApi.FaqApi();
+let apiInstance = new MerchantStoreApi.FaqApi();
 let internal_id = 56; // Number | 
-apiInstance.deleteFaqByInternalId(internal_id).then((data) => {
+apiInstance.deleteFAQByInternalIdV1FaqsByInternalIdInternalIdDelete(internal_id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -172,9 +218,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## deleteFaqByQuestion
+## deleteFAQByQuestionV1FaqsQuestionDelete
 
-> Boolean deleteFaqByQuestion(question)
+> Boolean deleteFAQByQuestionV1FaqsQuestionDelete(question)
 
 Delete Faq By Question
 
@@ -183,17 +229,17 @@ Delete FAQ by question
 ### Example
 
 ```javascript
-import BrainCommerceShopifyIngestorApi from 'brain_commerce_shopify_ingestor_api';
-let defaultClient = BrainCommerceShopifyIngestorApi.ApiClient.instance;
+import MerchantStoreApi from 'merchant_store_api';
+let defaultClient = MerchantStoreApi.ApiClient.instance;
 // Configure API key authorization: APIKeyHeader
 let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new BrainCommerceShopifyIngestorApi.FaqApi();
+let apiInstance = new MerchantStoreApi.FaqApi();
 let question = "question_example"; // String | 
-apiInstance.deleteFaqByQuestion(question).then((data) => {
+apiInstance.deleteFAQByQuestionV1FaqsQuestionDelete(question).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -222,9 +268,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## deleteFaqCollection
+## deleteFAQCollectionV1FaqsCollectionDelete
 
-> Boolean deleteFaqCollection()
+> Boolean deleteFAQCollectionV1FaqsCollectionDelete()
 
 Delete Faq Collection
 
@@ -233,16 +279,16 @@ Delete FAQ collection
 ### Example
 
 ```javascript
-import BrainCommerceShopifyIngestorApi from 'brain_commerce_shopify_ingestor_api';
-let defaultClient = BrainCommerceShopifyIngestorApi.ApiClient.instance;
+import MerchantStoreApi from 'merchant_store_api';
+let defaultClient = MerchantStoreApi.ApiClient.instance;
 // Configure API key authorization: APIKeyHeader
 let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new BrainCommerceShopifyIngestorApi.FaqApi();
-apiInstance.deleteFaqCollection().then((data) => {
+let apiInstance = new MerchantStoreApi.FaqApi();
+apiInstance.deleteFAQCollectionV1FaqsCollectionDelete().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -268,9 +314,61 @@ This endpoint does not need any parameter.
 - **Accept**: application/json
 
 
-## getAllFaqs
+## deletesAllFAQFromCollectionV1FaqsResetCollectionDelete
 
-> [Faq] getAllFaqs()
+> Object deletesAllFAQFromCollectionV1FaqsResetCollectionDelete(opts)
+
+Deletes All Faq From Collection
+
+Deletes all FAQ from collection.
+
+### Example
+
+```javascript
+import MerchantStoreApi from 'merchant_store_api';
+let defaultClient = MerchantStoreApi.ApiClient.instance;
+// Configure API key authorization: APIKeyHeader
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+APIKeyHeader.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKeyHeader.apiKeyPrefix = 'Token';
+
+let apiInstance = new MerchantStoreApi.FaqApi();
+let opts = {
+  'dry_run': false // Boolean | 
+};
+apiInstance.deletesAllFAQFromCollectionV1FaqsResetCollectionDelete(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **dry_run** | **Boolean**|  | [optional] [default to false]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[APIKeyHeader](../README.md#APIKeyHeader)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getAllFAQsV1FaqsGet
+
+> [Faq] getAllFAQsV1FaqsGet()
 
 Get All Faqs
 
@@ -279,16 +377,16 @@ Returns All FAQs. If collection has a large number of FAQs                 respo
 ### Example
 
 ```javascript
-import BrainCommerceShopifyIngestorApi from 'brain_commerce_shopify_ingestor_api';
-let defaultClient = BrainCommerceShopifyIngestorApi.ApiClient.instance;
+import MerchantStoreApi from 'merchant_store_api';
+let defaultClient = MerchantStoreApi.ApiClient.instance;
 // Configure API key authorization: APIKeyHeader
 let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new BrainCommerceShopifyIngestorApi.FaqApi();
-apiInstance.getAllFaqs().then((data) => {
+let apiInstance = new MerchantStoreApi.FaqApi();
+apiInstance.getAllFAQsV1FaqsGet().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -314,9 +412,9 @@ This endpoint does not need any parameter.
 - **Accept**: application/json
 
 
-## getFaqByQuestion
+## getFAQByQuestionV1FaqsQuestionGet
 
-> Faq getFaqByQuestion(question)
+> Faq getFAQByQuestionV1FaqsQuestionGet(question)
 
 Get Faq By Question
 
@@ -325,17 +423,17 @@ Get FAQ by question
 ### Example
 
 ```javascript
-import BrainCommerceShopifyIngestorApi from 'brain_commerce_shopify_ingestor_api';
-let defaultClient = BrainCommerceShopifyIngestorApi.ApiClient.instance;
+import MerchantStoreApi from 'merchant_store_api';
+let defaultClient = MerchantStoreApi.ApiClient.instance;
 // Configure API key authorization: APIKeyHeader
 let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new BrainCommerceShopifyIngestorApi.FaqApi();
+let apiInstance = new MerchantStoreApi.FaqApi();
 let question = "question_example"; // String | 
-apiInstance.getFaqByQuestion(question).then((data) => {
+apiInstance.getFAQByQuestionV1FaqsQuestionGet(question).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -364,55 +462,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## getFaqCollectionExists
+## importMultipleFAQsV1FaqsPost
 
-> Object getFaqCollectionExists()
-
-Check If Faq Collection Exists.
-
-Returns true if FAQ collection exists else return false
-
-### Example
-
-```javascript
-import BrainCommerceShopifyIngestorApi from 'brain_commerce_shopify_ingestor_api';
-let defaultClient = BrainCommerceShopifyIngestorApi.ApiClient.instance;
-// Configure API key authorization: APIKeyHeader
-let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
-APIKeyHeader.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//APIKeyHeader.apiKeyPrefix = 'Token';
-
-let apiInstance = new BrainCommerceShopifyIngestorApi.FaqApi();
-apiInstance.getFaqCollectionExists().then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-**Object**
-
-### Authorization
-
-[APIKeyHeader](../README.md#APIKeyHeader)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## importMultipleFaqs
-
-> [Faq] importMultipleFaqs(faq)
+> [Faq] importMultipleFAQsV1FaqsPost(faq)
 
 Import Multiple Faqs
 
@@ -421,17 +473,17 @@ Import multiple FAQs. If a FAQ same question already exist, it is updated. Other
 ### Example
 
 ```javascript
-import BrainCommerceShopifyIngestorApi from 'brain_commerce_shopify_ingestor_api';
-let defaultClient = BrainCommerceShopifyIngestorApi.ApiClient.instance;
+import MerchantStoreApi from 'merchant_store_api';
+let defaultClient = MerchantStoreApi.ApiClient.instance;
 // Configure API key authorization: APIKeyHeader
 let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new BrainCommerceShopifyIngestorApi.FaqApi();
-let faq = [new BrainCommerceShopifyIngestorApi.Faq()]; // [Faq] | 
-apiInstance.importMultipleFaqs(faq).then((data) => {
+let apiInstance = new MerchantStoreApi.FaqApi();
+let faq = [new MerchantStoreApi.Faq()]; // [Faq] | 
+apiInstance.importMultipleFAQsV1FaqsPost(faq).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -460,61 +512,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## resetFaqCollection
+## updateFAQByQuestionV1FaqsQuestionPut
 
-> Object resetFaqCollection(opts)
-
-Deletes All Faq From Collection
-
-Deletes all FAQ from collection.
-
-### Example
-
-```javascript
-import BrainCommerceShopifyIngestorApi from 'brain_commerce_shopify_ingestor_api';
-let defaultClient = BrainCommerceShopifyIngestorApi.ApiClient.instance;
-// Configure API key authorization: APIKeyHeader
-let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
-APIKeyHeader.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//APIKeyHeader.apiKeyPrefix = 'Token';
-
-let apiInstance = new BrainCommerceShopifyIngestorApi.FaqApi();
-let opts = {
-  'dry_run': true // Boolean | 
-};
-apiInstance.resetFaqCollection(opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **dry_run** | **Boolean**|  | [optional] [default to true]
-
-### Return type
-
-**Object**
-
-### Authorization
-
-[APIKeyHeader](../README.md#APIKeyHeader)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## updateFaqByQuestion
-
-> Faq updateFaqByQuestion(question, faq)
+> Faq updateFAQByQuestionV1FaqsQuestionPut(question, faq)
 
 Update Faq By Question
 
@@ -523,18 +523,18 @@ Update FAQ By question
 ### Example
 
 ```javascript
-import BrainCommerceShopifyIngestorApi from 'brain_commerce_shopify_ingestor_api';
-let defaultClient = BrainCommerceShopifyIngestorApi.ApiClient.instance;
+import MerchantStoreApi from 'merchant_store_api';
+let defaultClient = MerchantStoreApi.ApiClient.instance;
 // Configure API key authorization: APIKeyHeader
 let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new BrainCommerceShopifyIngestorApi.FaqApi();
+let apiInstance = new MerchantStoreApi.FaqApi();
 let question = "question_example"; // String | 
-let faq = new BrainCommerceShopifyIngestorApi.Faq(); // Faq | 
-apiInstance.updateFaqByQuestion(question, faq).then((data) => {
+let faq = new MerchantStoreApi.Faq(); // Faq | 
+apiInstance.updateFAQByQuestionV1FaqsQuestionPut(question, faq).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

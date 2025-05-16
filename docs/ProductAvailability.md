@@ -1,4 +1,4 @@
-# BrainCommerceShopifyIngestorApi.ProductAvailability
+# MerchantStoreApi.ProductAvailability
 
 ## Enum
 

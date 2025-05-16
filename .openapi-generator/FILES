@@ -2,8 +2,6 @@
 .gitignore
 .travis.yml
 README.md
-docs/Content.md
-docs/ContentApi.md
 docs/DefaultApi.md
 docs/Faq.md
 docs/FaqApi.md
@@ -17,12 +15,10 @@ git_push.sh
 mocha.opts
 package.json
 src/ApiClient.js
-src/api/ContentApi.js
 src/api/DefaultApi.js
 src/api/FaqApi.js
 src/api/ProductApi.js
 src/index.js
-src/model/Content.js
 src/model/Faq.js
 src/model/HTTPValidationError.js
 src/model/Product.js
