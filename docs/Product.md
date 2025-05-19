@@ -1,0 +1,43 @@
+# MerchantStoreApi.Product
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**uuid** | **String** |  | [optional] 
+**sku** | **String** |  | 
+**sku_id** | **String** |  | [optional] 
+**product_category** | **String** |  | [optional] [default to &#39;&#39;]
+**product_category_path** | **String** |  | [optional] 
+**internal_id** | **Number** |  | [optional] 
+**availability** | [**ProductAvailability**](ProductAvailability.md) |  | 
+**price** | **Number** |  | [optional] [default to 0]
+**sale_price** | **Number** |  | [optional] [default to 0]
+**currency** | **String** |  | 
+**item_group_id** | **String** |  | [optional] [default to &#39;&#39;]
+**rrp** | **Number** |  | [optional] [default to 0]
+**product_status** | **String** |  | [optional] [default to &#39;&#39;]
+**title** | **String** |  | [optional] [default to &#39;&#39;]
+**description** | **String** |  | [optional] [default to &#39;&#39;]
+**gender** | **String** |  | [optional] [default to &#39;&#39;]
+**image_link** | **String** |  | [optional] [default to &#39;&#39;]
+**material** | **String** |  | [optional] [default to &#39;&#39;]
+**pattern** | **String** |  | [optional] [default to &#39;&#39;]
+**product_weight** | **Number** |  | [optional] [default to 0]
+**size** | **String** |  | [optional] [default to &#39;&#39;]
+**color** | **String** |  | [optional] [default to &#39;&#39;]
+**occasion** | **String** |  | [optional] [default to &#39;&#39;]
+**style** | **String** |  | [optional] [default to &#39;&#39;]
+**special_offer** | **String** |  | [optional] [default to &#39;&#39;]
+**collection** | **String** |  | [optional] [default to &#39;&#39;]
+**system_link** | **String** |  | [optional] [default to &#39;&#39;]
+**link** | **String** |  | [optional] [default to &#39;&#39;]
+**brand** | **String** |  | [optional] [default to &#39;&#39;]
+**model** | **String** |  | [optional] [default to &#39;&#39;]
+**gtin** | **String** |  | [optional] [default to &#39;&#39;]
+**condition** | **String** |  | [optional] [default to &#39;&#39;]
+**adult** | **String** |  | [optional] [default to &#39;&#39;]
+**summary_review** | **String** |  | [optional] [default to &#39;&#39;]
+**average_rating** | **Number** |  | [optional] [default to 0]
+
+
