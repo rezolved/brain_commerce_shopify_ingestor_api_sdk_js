@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**createProductBySKUV1ProductsSkuPost**](ProductApi.md#createProductBySKUV1ProductsSkuPost) | **POST** /v1/products/{sku} | Create Product By Sku
 [**createProductCollectionV1ProductsCollectionPost**](ProductApi.md#createProductCollectionV1ProductsCollectionPost) | **POST** /v1/products/collection | Create Product Collection
 [**deleteProductByInternalIdV1ProductsByInternalIdInternalIdDelete**](ProductApi.md#deleteProductByInternalIdV1ProductsByInternalIdInternalIdDelete) | **DELETE** /v1/products/by-internal-id/{internal_id} | Delete Product By Internal Id
+[**deleteProductByItemGroupId**](ProductApi.md#deleteProductByItemGroupId) | **DELETE** /v1/products/item-group/{item_group_id} | Delete Product By Item Group Id
 [**deleteProductBySKUV1ProductsSkuDelete**](ProductApi.md#deleteProductBySKUV1ProductsSkuDelete) | **DELETE** /v1/products/{sku} | Delete Product By Sku
 [**deleteProductCollectionV1ProductsCollectionDelete**](ProductApi.md#deleteProductCollectionV1ProductsCollectionDelete) | **DELETE** /v1/products/collection | Delete Product Collection
 [**deletesAllProductsFromCollectionV1ProductsResetCollectionDelete**](ProductApi.md#deletesAllProductsFromCollectionV1ProductsResetCollectionDelete) | **DELETE** /v1/products/reset-collection | Deletes All Products From Collection
@@ -203,6 +204,56 @@ apiInstance.deleteProductByInternalIdV1ProductsByInternalIdInternalIdDelete(inte
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **internal_id** | **Number**|  | 
+
+### Return type
+
+**Boolean**
+
+### Authorization
+
+[APIKeyHeader](../README.md#APIKeyHeader)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## deleteProductByItemGroupId
+
+> Boolean deleteProductByItemGroupId(item_group_id)
+
+Delete Product By Item Group Id
+
+Delete product by item_group_id
+
+### Example
+
+```javascript
+import MerchantStoreApi from 'merchant_store_api';
+let defaultClient = MerchantStoreApi.ApiClient.instance;
+// Configure API key authorization: APIKeyHeader
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+APIKeyHeader.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKeyHeader.apiKeyPrefix = 'Token';
+
+let apiInstance = new MerchantStoreApi.ProductApi();
+let item_group_id = "item_group_id_example"; // String | 
+apiInstance.deleteProductByItemGroupId(item_group_id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **item_group_id** | **String**|  | 
 
 ### Return type
 

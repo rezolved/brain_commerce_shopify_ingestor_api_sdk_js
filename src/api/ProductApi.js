@@ -227,6 +227,54 @@ export default class ProductApi {
 
 
     /**
+     * Delete Product By Item Group Id
+     * Delete product by item_group_id
+     * @param {String} item_group_id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Boolean} and HTTP response
+     */
+    deleteProductByItemGroupIdWithHttpInfo(item_group_id) {
+      let postBody = null;
+      // verify the required parameter 'item_group_id' is set
+      if (item_group_id === undefined || item_group_id === null) {
+        throw new Error("Missing the required parameter 'item_group_id' when calling deleteProductByItemGroupId");
+      }
+
+      let pathParams = {
+        'item_group_id': item_group_id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['APIKeyHeader'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = 'Boolean';
+      return this.apiClient.callApi(
+        '/v1/products/item-group/{item_group_id}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Delete Product By Item Group Id
+     * Delete product by item_group_id
+     * @param {String} item_group_id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Boolean}
+     */
+    deleteProductByItemGroupId(item_group_id) {
+      return this.deleteProductByItemGroupIdWithHttpInfo(item_group_id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
      * Delete Product By Sku
      * Delete product by SKU
      * @param {String} sku 
