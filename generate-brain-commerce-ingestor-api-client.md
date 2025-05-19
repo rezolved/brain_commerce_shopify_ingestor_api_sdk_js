@@ -2,7 +2,7 @@
 
 # Download the `openapi.json`
 ```shell
-wget https://brain-ingestors.dev.eu2.rezolve.com/shopify/openapi.json
+wget https://brain-ingestors.dev.eu2.rezolve.com/merchant/openapi.json
 ```
 # Install `openapi-generator` CLI
 Check [official installation guide](https://openapi-generator.tech/docs/installation) for full detail.

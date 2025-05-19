@@ -1,4 +1,4 @@
-# BrainCommerceShopifyIngestorApi.ValidationErrorLocInner
+# MerchantStoreApi.ValidationErrorLocInner
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# BrainCommerceShopifyIngestorApi.Faq
+# MerchantStoreApi.Faq
 
 ## Properties
 

@@ -1,27 +1,27 @@
-# BrainCommerceShopifyIngestorApi.ProductApi
+# MerchantStoreApi.ProductApi
 
-All URIs are relative to */shopify*
+All URIs are relative to */merchant*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**collectionExists**](ProductApi.md#collectionExists) | **GET** /v1/product/collection-exists | Check If Product Collection Exists.
-[**createCollection**](ProductApi.md#createCollection) | **POST** /v1/product/collection | Create Product Collection
-[**createProductBySku**](ProductApi.md#createProductBySku) | **POST** /v1/product/{sku} | Create Product By Sku
-[**deleteCollection**](ProductApi.md#deleteCollection) | **DELETE** /v1/product/collection | Delete Product Collection
-[**deleteProductByInternalId**](ProductApi.md#deleteProductByInternalId) | **DELETE** /v1/product/by-internal-id/{internal_id} | Delete Product By Internal Id
-[**deleteProductByItemGroupId**](ProductApi.md#deleteProductByItemGroupId) | **DELETE** /v1/product/by-item-group-id/{item_group_id} | Delete Product By Item Group Id
-[**deleteProductBySku**](ProductApi.md#deleteProductBySku) | **DELETE** /v1/product/{sku} | Delete Product By Sku
-[**getAllProducts**](ProductApi.md#getAllProducts) | **GET** /v1/product | Get All Products
-[**getProductBySku**](ProductApi.md#getProductBySku) | **GET** /v1/product/{sku} | Gest Product By Sku
-[**importMultipleProducts**](ProductApi.md#importMultipleProducts) | **POST** /v1/product | Import Multiple Products
-[**resetProductCollection**](ProductApi.md#resetProductCollection) | **DELETE** /v1/product/reset-collection | Deletes All Products From Collection
-[**updateProductBySku**](ProductApi.md#updateProductBySku) | **PUT** /v1/product/{sku} | Update Product By Sku
+[**checkIfProductCollectionExistsV1ProductsCollectionExistsGet**](ProductApi.md#checkIfProductCollectionExistsV1ProductsCollectionExistsGet) | **GET** /v1/products/collection-exists | Check If Product Collection Exists.
+[**createProductBySKUV1ProductsSkuPost**](ProductApi.md#createProductBySKUV1ProductsSkuPost) | **POST** /v1/products/{sku} | Create Product By Sku
+[**createProductCollectionV1ProductsCollectionPost**](ProductApi.md#createProductCollectionV1ProductsCollectionPost) | **POST** /v1/products/collection | Create Product Collection
+[**deleteProductByInternalIdV1ProductsByInternalIdInternalIdDelete**](ProductApi.md#deleteProductByInternalIdV1ProductsByInternalIdInternalIdDelete) | **DELETE** /v1/products/by-internal-id/{internal_id} | Delete Product By Internal Id
+[**deleteProductByItemGroupId**](ProductApi.md#deleteProductByItemGroupId) | **DELETE** /v1/products/item-group/{item_group_id} | Delete Product By Item Group Id
+[**deleteProductBySKUV1ProductsSkuDelete**](ProductApi.md#deleteProductBySKUV1ProductsSkuDelete) | **DELETE** /v1/products/{sku} | Delete Product By Sku
+[**deleteProductCollectionV1ProductsCollectionDelete**](ProductApi.md#deleteProductCollectionV1ProductsCollectionDelete) | **DELETE** /v1/products/collection | Delete Product Collection
+[**deletesAllProductsFromCollectionV1ProductsResetCollectionDelete**](ProductApi.md#deletesAllProductsFromCollectionV1ProductsResetCollectionDelete) | **DELETE** /v1/products/reset-collection | Deletes All Products From Collection
+[**getAllProductsV1ProductsGet**](ProductApi.md#getAllProductsV1ProductsGet) | **GET** /v1/products | Get All Products
+[**getProductBySKUV1ProductsSkuGet**](ProductApi.md#getProductBySKUV1ProductsSkuGet) | **GET** /v1/products/{sku} | Get Product By Sku
+[**importMultipleProductsV1ProductsPost**](ProductApi.md#importMultipleProductsV1ProductsPost) | **POST** /v1/products | Import Multiple Products
+[**updateProductBySKUV1ProductsSkuPut**](ProductApi.md#updateProductBySKUV1ProductsSkuPut) | **PUT** /v1/products/{sku} | Update Product By Sku
 
 
 
-## collectionExists
+## checkIfProductCollectionExistsV1ProductsCollectionExistsGet
 
-> Object collectionExists()
+> Object checkIfProductCollectionExistsV1ProductsCollectionExistsGet()
 
 Check If Product Collection Exists.
 
@@ -30,16 +30,16 @@ Returns true if product collection exists else return false
 ### Example
 
 ```javascript
-import BrainCommerceShopifyIngestorApi from 'brain_commerce_shopify_ingestor_api';
-let defaultClient = BrainCommerceShopifyIngestorApi.ApiClient.instance;
+import MerchantStoreApi from 'merchant_store_api';
+let defaultClient = MerchantStoreApi.ApiClient.instance;
 // Configure API key authorization: APIKeyHeader
 let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new BrainCommerceShopifyIngestorApi.ProductApi();
-apiInstance.collectionExists().then((data) => {
+let apiInstance = new MerchantStoreApi.ProductApi();
+apiInstance.checkIfProductCollectionExistsV1ProductsCollectionExistsGet().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -65,61 +65,9 @@ This endpoint does not need any parameter.
 - **Accept**: application/json
 
 
-## createCollection
+## createProductBySKUV1ProductsSkuPost
 
-> Object createCollection(opts)
-
-Create Product Collection
-
-Creates product collection/schema in Weaviate database
-
-### Example
-
-```javascript
-import BrainCommerceShopifyIngestorApi from 'brain_commerce_shopify_ingestor_api';
-let defaultClient = BrainCommerceShopifyIngestorApi.ApiClient.instance;
-// Configure API key authorization: APIKeyHeader
-let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
-APIKeyHeader.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//APIKeyHeader.apiKeyPrefix = 'Token';
-
-let apiInstance = new BrainCommerceShopifyIngestorApi.ProductApi();
-let opts = {
-  'delete_existing_collection': false // Boolean | 
-};
-apiInstance.createCollection(opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **delete_existing_collection** | **Boolean**|  | [optional] [default to false]
-
-### Return type
-
-**Object**
-
-### Authorization
-
-[APIKeyHeader](../README.md#APIKeyHeader)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## createProductBySku
-
-> Product createProductBySku(sku, product)
+> Product createProductBySKUV1ProductsSkuPost(sku, product)
 
 Create Product By Sku
 
@@ -128,18 +76,18 @@ Create Product by SKU
 ### Example
 
 ```javascript
-import BrainCommerceShopifyIngestorApi from 'brain_commerce_shopify_ingestor_api';
-let defaultClient = BrainCommerceShopifyIngestorApi.ApiClient.instance;
+import MerchantStoreApi from 'merchant_store_api';
+let defaultClient = MerchantStoreApi.ApiClient.instance;
 // Configure API key authorization: APIKeyHeader
 let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new BrainCommerceShopifyIngestorApi.ProductApi();
+let apiInstance = new MerchantStoreApi.ProductApi();
 let sku = "sku_example"; // String | 
-let product = new BrainCommerceShopifyIngestorApi.Product(); // Product | 
-apiInstance.createProductBySku(sku, product).then((data) => {
+let product = new MerchantStoreApi.Product(); // Product | 
+apiInstance.createProductBySKUV1ProductsSkuPost(sku, product).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -169,27 +117,30 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## deleteCollection
+## createProductCollectionV1ProductsCollectionPost
 
-> Boolean deleteCollection()
+> Object createProductCollectionV1ProductsCollectionPost(opts)
 
-Delete Product Collection
+Create Product Collection
 
-Delete product collection
+Creates product collection/schema in Weaviate database
 
 ### Example
 
 ```javascript
-import BrainCommerceShopifyIngestorApi from 'brain_commerce_shopify_ingestor_api';
-let defaultClient = BrainCommerceShopifyIngestorApi.ApiClient.instance;
+import MerchantStoreApi from 'merchant_store_api';
+let defaultClient = MerchantStoreApi.ApiClient.instance;
 // Configure API key authorization: APIKeyHeader
 let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new BrainCommerceShopifyIngestorApi.ProductApi();
-apiInstance.deleteCollection().then((data) => {
+let apiInstance = new MerchantStoreApi.ProductApi();
+let opts = {
+  'delete_existing_collection': false // Boolean | 
+};
+apiInstance.createProductCollectionV1ProductsCollectionPost(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -199,11 +150,14 @@ apiInstance.deleteCollection().then((data) => {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **delete_existing_collection** | **Boolean**|  | [optional] [default to false]
 
 ### Return type
 
-**Boolean**
+**Object**
 
 ### Authorization
 
@@ -215,9 +169,9 @@ This endpoint does not need any parameter.
 - **Accept**: application/json
 
 
-## deleteProductByInternalId
+## deleteProductByInternalIdV1ProductsByInternalIdInternalIdDelete
 
-> Boolean deleteProductByInternalId(internal_id)
+> Boolean deleteProductByInternalIdV1ProductsByInternalIdInternalIdDelete(internal_id)
 
 Delete Product By Internal Id
 
@@ -226,17 +180,17 @@ Delete product by internal_id
 ### Example
 
 ```javascript
-import BrainCommerceShopifyIngestorApi from 'brain_commerce_shopify_ingestor_api';
-let defaultClient = BrainCommerceShopifyIngestorApi.ApiClient.instance;
+import MerchantStoreApi from 'merchant_store_api';
+let defaultClient = MerchantStoreApi.ApiClient.instance;
 // Configure API key authorization: APIKeyHeader
 let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new BrainCommerceShopifyIngestorApi.ProductApi();
+let apiInstance = new MerchantStoreApi.ProductApi();
 let internal_id = 56; // Number | 
-apiInstance.deleteProductByInternalId(internal_id).then((data) => {
+apiInstance.deleteProductByInternalIdV1ProductsByInternalIdInternalIdDelete(internal_id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -276,15 +230,15 @@ Delete product by item_group_id
 ### Example
 
 ```javascript
-import BrainCommerceShopifyIngestorApi from 'brain_commerce_shopify_ingestor_api';
-let defaultClient = BrainCommerceShopifyIngestorApi.ApiClient.instance;
+import MerchantStoreApi from 'merchant_store_api';
+let defaultClient = MerchantStoreApi.ApiClient.instance;
 // Configure API key authorization: APIKeyHeader
 let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new BrainCommerceShopifyIngestorApi.ProductApi();
+let apiInstance = new MerchantStoreApi.ProductApi();
 let item_group_id = "item_group_id_example"; // String | 
 apiInstance.deleteProductByItemGroupId(item_group_id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -315,9 +269,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## deleteProductBySku
+## deleteProductBySKUV1ProductsSkuDelete
 
-> Boolean deleteProductBySku(sku)
+> Boolean deleteProductBySKUV1ProductsSkuDelete(sku)
 
 Delete Product By Sku
 
@@ -326,17 +280,17 @@ Delete product by SKU
 ### Example
 
 ```javascript
-import BrainCommerceShopifyIngestorApi from 'brain_commerce_shopify_ingestor_api';
-let defaultClient = BrainCommerceShopifyIngestorApi.ApiClient.instance;
+import MerchantStoreApi from 'merchant_store_api';
+let defaultClient = MerchantStoreApi.ApiClient.instance;
 // Configure API key authorization: APIKeyHeader
 let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new BrainCommerceShopifyIngestorApi.ProductApi();
+let apiInstance = new MerchantStoreApi.ProductApi();
 let sku = "sku_example"; // String | 
-apiInstance.deleteProductBySku(sku).then((data) => {
+apiInstance.deleteProductBySKUV1ProductsSkuDelete(sku).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -365,27 +319,27 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## getAllProducts
+## deleteProductCollectionV1ProductsCollectionDelete
 
-> [Product] getAllProducts()
+> Boolean deleteProductCollectionV1ProductsCollectionDelete()
 
-Get All Products
+Delete Product Collection
 
-Returns All Products. If collection has a large number of products, response may take long time
+Delete product collection
 
 ### Example
 
 ```javascript
-import BrainCommerceShopifyIngestorApi from 'brain_commerce_shopify_ingestor_api';
-let defaultClient = BrainCommerceShopifyIngestorApi.ApiClient.instance;
+import MerchantStoreApi from 'merchant_store_api';
+let defaultClient = MerchantStoreApi.ApiClient.instance;
 // Configure API key authorization: APIKeyHeader
 let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new BrainCommerceShopifyIngestorApi.ProductApi();
-apiInstance.getAllProducts().then((data) => {
+let apiInstance = new MerchantStoreApi.ProductApi();
+apiInstance.deleteProductCollectionV1ProductsCollectionDelete().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -399,7 +353,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[Product]**](Product.md)
+**Boolean**
 
 ### Authorization
 
@@ -411,109 +365,9 @@ This endpoint does not need any parameter.
 - **Accept**: application/json
 
 
-## getProductBySku
+## deletesAllProductsFromCollectionV1ProductsResetCollectionDelete
 
-> Product getProductBySku(sku)
-
-Gest Product By Sku
-
-Get Product by SKU
-
-### Example
-
-```javascript
-import BrainCommerceShopifyIngestorApi from 'brain_commerce_shopify_ingestor_api';
-let defaultClient = BrainCommerceShopifyIngestorApi.ApiClient.instance;
-// Configure API key authorization: APIKeyHeader
-let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
-APIKeyHeader.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//APIKeyHeader.apiKeyPrefix = 'Token';
-
-let apiInstance = new BrainCommerceShopifyIngestorApi.ProductApi();
-let sku = "sku_example"; // String | 
-apiInstance.getProductBySku(sku).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sku** | **String**|  | 
-
-### Return type
-
-[**Product**](Product.md)
-
-### Authorization
-
-[APIKeyHeader](../README.md#APIKeyHeader)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## importMultipleProducts
-
-> Object importMultipleProducts(product)
-
-Import Multiple Products
-
-Import multiple products. If a product already exist, it is update. Otherwise new product is created
-
-### Example
-
-```javascript
-import BrainCommerceShopifyIngestorApi from 'brain_commerce_shopify_ingestor_api';
-let defaultClient = BrainCommerceShopifyIngestorApi.ApiClient.instance;
-// Configure API key authorization: APIKeyHeader
-let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
-APIKeyHeader.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//APIKeyHeader.apiKeyPrefix = 'Token';
-
-let apiInstance = new BrainCommerceShopifyIngestorApi.ProductApi();
-let product = [new BrainCommerceShopifyIngestorApi.Product()]; // [Product] | 
-apiInstance.importMultipleProducts(product).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **product** | [**[Product]**](Product.md)|  | 
-
-### Return type
-
-**Object**
-
-### Authorization
-
-[APIKeyHeader](../README.md#APIKeyHeader)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## resetProductCollection
-
-> Object resetProductCollection(opts)
+> Object deletesAllProductsFromCollectionV1ProductsResetCollectionDelete(opts)
 
 Deletes All Products From Collection
 
@@ -522,19 +376,19 @@ Deletes all products from the Weaviate product.
 ### Example
 
 ```javascript
-import BrainCommerceShopifyIngestorApi from 'brain_commerce_shopify_ingestor_api';
-let defaultClient = BrainCommerceShopifyIngestorApi.ApiClient.instance;
+import MerchantStoreApi from 'merchant_store_api';
+let defaultClient = MerchantStoreApi.ApiClient.instance;
 // Configure API key authorization: APIKeyHeader
 let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new BrainCommerceShopifyIngestorApi.ProductApi();
+let apiInstance = new MerchantStoreApi.ProductApi();
 let opts = {
   'dry_run': true // Boolean | 
 };
-apiInstance.resetProductCollection(opts).then((data) => {
+apiInstance.deletesAllProductsFromCollectionV1ProductsResetCollectionDelete(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -563,9 +417,155 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## updateProductBySku
+## getAllProductsV1ProductsGet
 
-> Product updateProductBySku(sku, product)
+> [Product] getAllProductsV1ProductsGet()
+
+Get All Products
+
+Returns All Products. If collection has a large number of products, response may take long time
+
+### Example
+
+```javascript
+import MerchantStoreApi from 'merchant_store_api';
+let defaultClient = MerchantStoreApi.ApiClient.instance;
+// Configure API key authorization: APIKeyHeader
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+APIKeyHeader.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKeyHeader.apiKeyPrefix = 'Token';
+
+let apiInstance = new MerchantStoreApi.ProductApi();
+apiInstance.getAllProductsV1ProductsGet().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[Product]**](Product.md)
+
+### Authorization
+
+[APIKeyHeader](../README.md#APIKeyHeader)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getProductBySKUV1ProductsSkuGet
+
+> Product getProductBySKUV1ProductsSkuGet(sku)
+
+Get Product By Sku
+
+Get Product by SKU
+
+### Example
+
+```javascript
+import MerchantStoreApi from 'merchant_store_api';
+let defaultClient = MerchantStoreApi.ApiClient.instance;
+// Configure API key authorization: APIKeyHeader
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+APIKeyHeader.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKeyHeader.apiKeyPrefix = 'Token';
+
+let apiInstance = new MerchantStoreApi.ProductApi();
+let sku = "sku_example"; // String | 
+apiInstance.getProductBySKUV1ProductsSkuGet(sku).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sku** | **String**|  | 
+
+### Return type
+
+[**Product**](Product.md)
+
+### Authorization
+
+[APIKeyHeader](../README.md#APIKeyHeader)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## importMultipleProductsV1ProductsPost
+
+> [Object] importMultipleProductsV1ProductsPost(product)
+
+Import Multiple Products
+
+Import multiple products. If a product already exist, it is update. Otherwise new product is created
+
+### Example
+
+```javascript
+import MerchantStoreApi from 'merchant_store_api';
+let defaultClient = MerchantStoreApi.ApiClient.instance;
+// Configure API key authorization: APIKeyHeader
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+APIKeyHeader.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKeyHeader.apiKeyPrefix = 'Token';
+
+let apiInstance = new MerchantStoreApi.ProductApi();
+let product = [new MerchantStoreApi.Product()]; // [Product] | 
+apiInstance.importMultipleProductsV1ProductsPost(product).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product** | [**[Product]**](Product.md)|  | 
+
+### Return type
+
+**[Object]**
+
+### Authorization
+
+[APIKeyHeader](../README.md#APIKeyHeader)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## updateProductBySKUV1ProductsSkuPut
+
+> Product updateProductBySKUV1ProductsSkuPut(sku, product)
 
 Update Product By Sku
 
@@ -574,18 +574,18 @@ Update Product By SKU
 ### Example
 
 ```javascript
-import BrainCommerceShopifyIngestorApi from 'brain_commerce_shopify_ingestor_api';
-let defaultClient = BrainCommerceShopifyIngestorApi.ApiClient.instance;
+import MerchantStoreApi from 'merchant_store_api';
+let defaultClient = MerchantStoreApi.ApiClient.instance;
 // Configure API key authorization: APIKeyHeader
 let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new BrainCommerceShopifyIngestorApi.ProductApi();
+let apiInstance = new MerchantStoreApi.ProductApi();
 let sku = "sku_example"; // String | 
-let product = new BrainCommerceShopifyIngestorApi.Product(); // Product | 
-apiInstance.updateProductBySku(sku, product).then((data) => {
+let product = new MerchantStoreApi.Product(); // Product | 
+apiInstance.updateProductBySKUV1ProductsSkuPut(sku, product).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
